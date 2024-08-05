@@ -1,6 +1,8 @@
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import bgimg from "../assets/images/bg/home.png";
 import { useNavigate } from "react-router-dom";
+import jsondata from "../assets/json/stamplist.json";
+import { StampView } from "../component/StampView";
 
 export const StampList = () => {
   const nav = useNavigate();
@@ -25,184 +27,16 @@ export const StampList = () => {
               スタンプ一覧
             </Typography>
             <Box>
-              <Typography
-                variant="h5"
-                sx={{ borderBottom: "2px solid #253958" }}
-              >
-                １号館
-              </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-              </Grid>
+              <StampView json={jsondata[0]} />
             </Box>
             <Box>
-              <Typography
-                variant="h5"
-                sx={{ borderBottom: "2px solid #253958" }}
-              >
-                ３号館
-              </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-              </Grid>
+              <StampView json={jsondata[1]} />
             </Box>
             <Box>
-              <Typography
-                variant="h5"
-                sx={{ borderBottom: "2px solid #253958" }}
-              >
-                10号館
-              </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-              </Grid>
+              <StampView json={jsondata[2]} />
             </Box>
             <Box>
-              <Typography
-                variant="h5"
-                sx={{ borderBottom: "2px solid #253958" }}
-              >
-                チャレンジングロット
-              </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
-                  <img
-                    src="src\assets\images\stamp\nkc-ug.jpg"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <Typography variant="h6">NKC-UG</Typography>
-                </Grid>
-              </Grid>
+              <StampView json={jsondata[3]} />
             </Box>
             <Button
               variant="contained"
