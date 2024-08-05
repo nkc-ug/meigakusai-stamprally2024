@@ -9,21 +9,21 @@ export const Home = () => {
     <Container
       maxWidth="sm"
       sx={{
-        padding: "0px",
         minHeight: "100vh",
-        height: "100%",
-        width: "100vw",
+        padding: 2,
         textAlign: "center",
         backgroundImage: `url(${bgimg})`,
-        backgroundSize: "cover",
+        backgroundSize: "auto 100%",
+        backgroundPosition: "center top",
+        backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Box>
-        <Typography variant="h3" sx={{ marginBottom: 4 }}>
+        <Typography variant="h4" sx={{ marginBottom: 4 }}>
           名学祭スタンプラリー
         </Typography>
         <Grid container direction="column" spacing={3} alignItems="center">
@@ -33,7 +33,7 @@ export const Home = () => {
               size="large"
               sx={{ padding: 2, width: "25vh" }}
               onClick={() => {
-                nav("/StampList");
+                nav("/stamplist");
               }}
             >
               <Typography variant="h5">スタンプ一覧</Typography>
@@ -46,6 +46,20 @@ export const Home = () => {
               sx={{ padding: 2, width: "25vh" }}
             >
               <Typography variant="h5">参加方法</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{ padding: 2, width: "25vh" }}
+              onClick={() => {
+                window.open(
+                  "https://forms.office.com/Pages/ResponsePage.aspx?id=eeUPGhB_lUOsHmxSoVCbiP4hXRkgLplMkTlk7A0MQPlURDFRNllBTFBUWE9WQU5aTlBYUFhKSDNFNy4u"
+                );
+              }}
+            >
+              <Typography variant="h5">お問い合わせ</Typography>
             </Button>
           </Grid>
           <Grid item>

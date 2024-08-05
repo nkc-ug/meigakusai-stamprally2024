@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import bgimg from "../assets/images/bg/home.png";
 import { useNavigate } from "react-router-dom";
 
-export const StampList = () => {
+export const Debug = () => {
   const nav = useNavigate();
 
   return (
@@ -14,7 +14,7 @@ export const StampList = () => {
             padding: 2,
             textAlign: "center",
             backgroundImage: `url(${bgimg})`,
-            backgroundSize: "auto 100vh",
+            backgroundSize: "auto 100%",
             backgroundPosition: "center top",
             backgroundAttachment: "fixed",
             backgroundRepeat: "no-repeat",
@@ -31,36 +31,29 @@ export const StampList = () => {
               >
                 １号館
               </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+              <Grid container spacing={3}>
+                <Grid item sx={{ width: "25%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "25%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "25%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "25%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
@@ -76,36 +69,29 @@ export const StampList = () => {
               >
                 ３号館
               </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+              <Grid container spacing={3}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
@@ -121,36 +107,29 @@ export const StampList = () => {
               >
                 10号館
               </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+              <Grid container spacing={3}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
@@ -166,36 +145,29 @@ export const StampList = () => {
               >
                 チャレンジングロット
               </Typography>
-              <Grid
-                container
-                spacing={3}
-                sx={{
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+              <Grid container spacing={3}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <Typography variant="h6">NKC-UG</Typography>
                 </Grid>
-                <Grid item sx={{ width: "27%", margin: "4px" }}>
+                <Grid item sx={{ width: "30%", margin: "10px" }}>
                   <img
                     src="src\assets\images\stamp\nkc-ug.jpg"
                     style={{ width: "100%", height: "auto" }}
