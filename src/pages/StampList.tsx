@@ -26,18 +26,14 @@ export const StampList = () => {
             <Typography variant="h4" sx={{ marginBottom: 4 }}>
               スタンプ一覧
             </Typography>
-            <Box>
-              <StampView json={jsondata[0]} />
-            </Box>
-            <Box>
-              <StampView json={jsondata[1]} />
-            </Box>
-            <Box>
-              <StampView json={jsondata[2]} />
-            </Box>
-            <Box>
-              <StampView json={jsondata[3]} />
-            </Box>
+            {jsondata.map((json, index) => {
+              return (
+                <Box key={index}>
+                  <StampView json={json} />
+                </Box>
+              );
+            })}
+
             <Button
               variant="contained"
               size="large"
