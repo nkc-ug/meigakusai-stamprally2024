@@ -1,9 +1,19 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import bgimg from "../assets/images/bg/home.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import jsondata from "../assets/json/stamplist.json";
 
 export const StampGet = () => {
   const nav = useNavigate();
+  const id = useParams();
+  const imagesPath = "/src/assets/images/stamp/";
+
+  const ImgPathGet = () => {
+    const shopData = jsondata[0].shop.find(
+      (data) => String(data.id) === String(id.id)
+    );
+    return String(shopData ? imagesPath + shopData.imagepath : "");
+  };
 
   return (
     <Container
@@ -24,7 +34,7 @@ export const StampGet = () => {
       <Box>
         <Typography variant="h3">スタンプゲット！</Typography>
         <Box>
-          <img src="src/assets/images/stamp/nkc-ug.jpg" />
+          <img src={ImgPathGet()} alt="stamp" />
         </Box>
 
         <Button

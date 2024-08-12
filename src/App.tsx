@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stamplist" element={<StampList />} />
-        <Route path="/stampget" element={<StampGet />} />
+        <Route path="/stampget/:id" element={<StampGet />} />
         <Route path="/debug" element={<Debug />} />
       </Routes>
     </BrowserRouter>
