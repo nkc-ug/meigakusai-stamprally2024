@@ -44,6 +44,9 @@ export const Home = () => {
               variant="contained"
               size="large"
               sx={{ padding: 2, width: "25vh" }}
+              onClick={() => {
+                nav("/participation");
+              }}
             >
               <Typography variant="h5">参加方法</Typography>
             </Button>
