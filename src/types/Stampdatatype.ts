@@ -4,7 +4,7 @@ export type LocationStamp = {
 };
 
 export type ShopData = {
-  id: number;
+  id: string;
   name: string;
   classname: string;
   category: string;

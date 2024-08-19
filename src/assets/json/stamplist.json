@@ -3,30 +3,16 @@
     "location": "1号館",
     "shop": [
       {
-        "id": 152,
+        "id": "152",
         "name": "ストラックアウト",
         "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       },
       {
-        "id": 143,
+        "id": "162",
         "name": "脱出ゲーム ",
         "classname": "GG1X",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 176,
-        "name": "クイズ大会",
-        "classname": "NKC-UG",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 133,
-        "name": "展示",
-        "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       }
@@ -36,30 +22,16 @@
     "location": "3号館",
     "shop": [
       {
-        "id": 152,
+        "id": "334",
         "name": "ストラックアウト",
         "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       },
       {
-        "id": 143,
-        "name": "脱出ゲーム ",
-        "classname": "GG1X",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 176,
+        "id": "352",
         "name": "クイズ大会",
         "classname": "NKC-UG",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 133,
-        "name": "展示",
-        "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       }
@@ -69,30 +41,16 @@
     "location": "10号館",
     "shop": [
       {
-        "id": 152,
+        "id": "1032",
         "name": "ストラックアウト",
         "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       },
       {
-        "id": 143,
+        "id": "1042",
         "name": "脱出ゲーム ",
         "classname": "GG1X",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 176,
-        "name": "クイズ大会",
-        "classname": "NKC-UG",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 133,
-        "name": "展示",
-        "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       }
@@ -102,30 +60,16 @@
     "location": "チャレンジングロット",
     "shop": [
       {
-        "id": 152,
+        "id": "01",
         "name": "ストラックアウト",
         "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       },
       {
-        "id": 143,
+        "id": "02",
         "name": "脱出ゲーム ",
         "classname": "GG1X",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 176,
-        "name": "クイズ大会",
-        "classname": "NKC-UG",
-        "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
-      },
-      {
-        "id": 133,
-        "name": "展示",
-        "classname": "CG1X",
         "category": "文化店",
         "imagepath": "nkc-ug.jpg"
       }

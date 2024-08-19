@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { LocationStamp } from "../types/Stampdatatype";
+import { GetStampData } from "./StampData";
 
 type LocationStampProp = {
   json: LocationStamp;
@@ -13,7 +14,11 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
       <Grid item sx={{ width: "27%", margin: "4px" }} key={index}>
         <img
           src={imagespath + data.imagepath}
-          style={{ width: "100%", height: "auto" }}
+          style={{
+            width: "100%",
+            height: "auto",
+            filter: !GetStampData(data.id) ? "saturate(0%)" : "",
+          }}
           alt={data.name}
         />
         <Typography variant="h6">{data.name}</Typography>
