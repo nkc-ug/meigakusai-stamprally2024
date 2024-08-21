@@ -1,12 +1,16 @@
 import Cookies from "js-cookie";
 
 export const SetStampData = (id: string, isGet: boolean = true) => {
-  const tmpjson = JSON.parse(document.cookie);
+  const cookieData = Cookies.get("Meigakusai-Stamprally2024");
+  const options = { expires: 7 };
+  const tmpjson = cookieData
+    ? JSON.parse(cookieData)
+    : JSON.parse(DefaultStampData());
   const json = tmpjson.map((stamp: StampData) =>
     stamp.id === id ? { ...stamp, isGet: isGet } : stamp
   );
   const data = JSON.stringify(json, null, 2);
-  Cookies.set("Meigakusai-Stamprally2024", data);
+  Cookies.set("Meigakusai-Stamprally2024", data, options);
 };
 type StampData = {
   id: string;
@@ -17,9 +21,7 @@ export const GetStampData = (id: string) => {
   const json = cookieData
     ? JSON.parse(cookieData)
     : JSON.parse(DefaultStampData());
-  const element = json.stampdata.find(
-    (element: StampData) => element.id === id
-  );
+  const element = json.find((element: StampData) => element.id === id);
   return element ? element.isGet : false;
 };
 export const DefaultStampData = () => {

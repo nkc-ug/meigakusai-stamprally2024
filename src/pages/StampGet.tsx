@@ -2,6 +2,7 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import bgimg from "../assets/images/bg/home.png";
 import { useNavigate, useParams } from "react-router-dom";
 import jsondata from "../assets/json/stamplist.json";
+import { SetStampData } from "../component/StampData";
 
 export const StampGet = () => {
   const nav = useNavigate();
@@ -9,11 +10,15 @@ export const StampGet = () => {
   const imagesPath = "/src/assets/images/stamp/";
 
   const ImgPathGet = () => {
-    const shopData = jsondata[0].shop.find(
-      (data) => String(data.id) === String(id.id)
-    );
-    return String(shopData ? imagesPath + shopData.imagepath : "");
+    const shopData = jsondata
+      .map((floor) =>
+        floor.shop.find((data) => String(data.id) === String(id.id))
+      )
+      .find((shop) => shop !== undefined);
+
+    return shopData ? `${imagesPath}${shopData.imagepath}` : "";
   };
+  SetStampData(String(id.id));
 
   return (
     <Container
