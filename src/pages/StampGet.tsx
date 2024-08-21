@@ -11,8 +11,8 @@ export const StampGet = () => {
 
   const ImgPathGet = () => {
     const shopData = jsondata
-      .map((floor) =>
-        floor.shop.find((data) => String(data.id) === String(id.id))
+      .map((location) =>
+        location.shop.find((data) => String(data.id) === String(id.id))
       )
       .find((shop) => shop !== undefined);
 
