@@ -42,7 +42,7 @@ export const StampGet = () => {
           size="large"
           sx={{ padding: 2, width: "25vh" }}
           onClick={() => {
-            nav("/stamplist");
+            nav("/");
           }}
         >
           スタンプ一覧へ
