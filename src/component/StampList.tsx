@@ -11,10 +11,8 @@ export const StampList = () => {
         </Typography>
         {jsondata.map((json, index) => {
           return (
-            <Card sx={{ borderRadius: "20px", marginY: "20px", padding: "20px" }}>
-              <Box key={index}>
-                <StampView json={json} />
-              </Box>
+            <Card key={index} sx={{ borderRadius: "20px", marginY: "20px", padding: "20px" }}>
+              <StampView json={json} />
             </Card>
           );
         })}
