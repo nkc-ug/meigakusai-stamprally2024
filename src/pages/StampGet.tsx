@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import jsondata from "../assets/json/stamplist.json";
 import { SetStampData } from "../component/StampData";
 
+import { HashingSha1 } from "../component/HashingSha1";
+
 export const StampGet = () => {
   const nav = useNavigate();
   const id = useParams();
@@ -12,13 +14,17 @@ export const StampGet = () => {
   const ImgPathGet = () => {
     const shopData = jsondata
       .map((location) =>
-        location.shop.find((data) => String(data.id) === String(id.id))
+        location.shop.find((data) => {
+          if (HashingSha1(String(data.id)) === String(id.id)) {
+            SetStampData(String(id.id));
+            return true;
+          }
+        })
       )
       .find((shop) => shop !== undefined);
 
     return shopData ? `${imagesPath}${shopData.imagepath}` : "";
   };
-  SetStampData(String(id.id));
 
   return (
     <Container

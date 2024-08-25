@@ -1,47 +1,27 @@
 import Cookies from "js-cookie";
+import { HashingSha1 } from "./HashingSha1";
 
-export const SetStampData = (id: string, isGet: boolean = true) => {
-  const cookieData = Cookies.get("Meigakusai-Stamprally2024");
+const COOKIE_KEY = "Meigakusai-Stamprally2024";
+
+export const SetStampData = (id: string) => {
   const options = { expires: 7 };
-  const tmpjson = cookieData
-    ? JSON.parse(cookieData)
-    : JSON.parse(DefaultStampData());
-  const json = tmpjson.map((stamp: StampData) =>
-    stamp.id === id ? { ...stamp, isGet: isGet } : stamp
-  );
-  const data = JSON.stringify(json, null, 2);
-  Cookies.set("Meigakusai-Stamprally2024", data, options);
+  /*
+    idを格納する際、urlのid(ハッシュ化済み)の場合はハッシュ化する必要はないがjsonのidを使って格納する場合はハッシュ化する必要がある。
+    現段階ではurlのidを使用しているのでハッシュ化は入れていないがjsonのidを使用する際はハッシュ化が必要
+  */
+  const stampdata = (Cookies.get(COOKIE_KEY) ?? id).split(",");
+  if (!stampdata.includes(id)) {
+    stampdata.push(id);
+  }
+
+  Cookies.set(COOKIE_KEY, stampdata.join(","), options);
 };
-type StampData = {
-  id: string;
-  isGet: boolean;
-};
+
 export const GetStampData = (id: string) => {
-  const cookieData = Cookies.get("Meigakusai-Stamprally2024");
-  const json = cookieData
-    ? JSON.parse(cookieData)
-    : JSON.parse(DefaultStampData());
-  const element = json.find((element: StampData) => element.id === id);
-  return element ? element.isGet : false;
-};
-export const DefaultStampData = () => {
-  const defaultJson = JSON.stringify(
-    [
-      { id: "152", isGet: false },
-      { id: "162", isGet: false },
-      { id: "334", isGet: false },
-      { id: "352", isGet: false },
-      { id: "618", isGet: false },
-      { id: "1032", isGet: false },
-      { id: "1042", isGet: false },
-      { id: "01", isGet: false },
-      { id: "02", isGet: false },
-    ],
-    null,
-    2
-  );
-  const options = { expires: 7 };
-  Cookies.set("Meigakusai-Stamprally2024", defaultJson, options);
+  const stampdata = (Cookies.get(COOKIE_KEY) ?? "").split(",");
+  const searchId = HashingSha1(id);
+  console.log(stampdata);
+  console.log(searchId);
 
-  return defaultJson;
+  return stampdata ? stampdata.includes(searchId) : false;
 };
