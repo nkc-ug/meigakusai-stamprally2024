@@ -20,8 +20,6 @@ export const SetStampData = (id: string) => {
 export const GetStampData = (id: string) => {
   const stampdata = (Cookies.get(COOKIE_KEY) ?? "").split(",");
   const searchId = HashingSha1(id);
-  console.log(stampdata);
-  console.log(searchId);
 
   return stampdata ? stampdata.includes(searchId) : false;
 };

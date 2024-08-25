@@ -25,6 +25,7 @@ export const StampGet = () => {
 
     return shopData ? `${imagesPath}${shopData.imagepath}` : "";
   };
+  SetStampData(String(id.id));
 
   return (
     <Container
