@@ -3,7 +3,6 @@ import bgimg from "../assets/images/bg/home.png";
 import { useNavigate, useParams } from "react-router-dom";
 import jsondata from "../assets/json/stamplist.json";
 import { SetStampData } from "../component/StampData";
-
 import { HashingSha1 } from "../component/HashingSha1";
 
 export const StampGet = () => {
@@ -25,7 +24,6 @@ export const StampGet = () => {
 
     return shopData ? `${imagesPath}${shopData.imagepath}` : "";
   };
-  SetStampData(String(id.id));
 
   return (
     <Container
