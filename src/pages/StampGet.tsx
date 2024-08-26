@@ -4,13 +4,15 @@ import { useNavigate, useParams } from "react-router-dom";
 import jsondata from "../assets/json/stamplist.json";
 import { SetStampData } from "../component/StampData";
 import { HashingSha1 } from "../component/HashingSha1";
+import { useEffect, useState } from "react";
 
 export const StampGet = () => {
   const nav = useNavigate();
   const id = useParams();
   const imagesPath = "/src/assets/images/stamp/";
+  const [imagePath, setImagePath] = useState("");
 
-  const ImgPathGet = () => {
+  const StampCheck = () => {
     const shopData = jsondata
       .map((location) =>
         location.shop.find((data) => {
@@ -21,8 +23,61 @@ export const StampGet = () => {
         })
       )
       .find((shop) => shop !== undefined);
+    useEffect(() => {
+      setImagePath(shopData ? `${imagesPath}${shopData.imagepath}` : "");
+    }, [shopData]);
+    return shopData ? <SuccessProcess /> : <ErrorProcess />;
+  };
 
-    return shopData ? `${imagesPath}${shopData.imagepath}` : "";
+  const SuccessProcess = () => {
+    return (
+      <Box>
+        <Typography variant="h3">スタンプゲット！</Typography>
+        <Box>
+          <img src={imagePath} alt="stamp" />
+        </Box>
+      </Box>
+    );
+  };
+
+  const ErrorProcess = () => {
+    const typoPadding = "5px";
+    return (
+      <Box sx={{ margin: "10px" }}>
+        <Typography variant="h3" sx={{ padding: typoPadding }}>
+          エラー
+        </Typography>
+        <Typography variant="h5" sx={{ padding: typoPadding }}>
+          指定されたスタンプは
+          <br />
+          存在しません
+        </Typography>
+        <Typography variant="h6" sx={{ padding: typoPadding }}>
+          不具合については
+          <br />
+          模擬店では対応いたしかねますので
+          <br />
+          下部の
+          <b>お問い合わせ</b>ボタンから
+          <br />
+          スタンプラリー運営まで
+          <br />
+          ご連絡お願いします
+        </Typography>
+        <Button
+          variant="contained"
+          size="large"
+          sx={{ padding: 2, width: "25vh" }}
+          onClick={() => {
+            window.open(
+              "https://forms.office.com/Pages/ResponsePage.aspx?id=eeUPGhB_lUOsHmxSoVCbiP4hXRkgLplMkTlk7A0MQPlURDFRNllBTFBUWE9WQU5aTlBYUFhKSDNFNy4u"
+            );
+          }}
+        >
+          お問い合わせ
+        </Button>
+      </Box>
+    );
   };
 
   return (
@@ -42,11 +97,7 @@ export const StampGet = () => {
       }}
     >
       <Box>
-        <Typography variant="h3">スタンプゲット！</Typography>
-        <Box>
-          <img src={ImgPathGet()} alt="stamp" />
-        </Box>
-
+        {StampCheck()}
         <Button
           variant="contained"
           size="large"
