@@ -1,29 +1,25 @@
-export const SetStampData = (id: string, isGet: boolean) => {
-  const tmpjson = [
-    { id: "152", isGet: false },
-    { id: "162", isGet: false },
-    { id: "334", isGet: false },
-    { id: "352", isGet: false },
-    { id: "618", isGet: false },
-    { id: "1032", isGet: false },
-    { id: "1042", isGet: false },
-    { id: "01", isGet: false },
-    { id: "02", isGet: false },
-  ];
-  const json = tmpjson.map((stamp) =>
-    stamp.id === id ? { ...stamp, isGet: isGet } : stamp
-  );
-  const data = JSON.stringify(json, null, 2);
-  localStorage.setItem("Meigakusai-Stamprally2024", data);
+import Cookies from "js-cookie";
+import { HashingSha1 } from "./HashingSha1";
+
+const COOKIE_KEY = "Meigakusai-Stamprally2024";
+
+export const SetStampData = (id: string) => {
+  const options = { expires: 7 };
+  /*
+    idを格納する際、urlのid(ハッシュ化済み)の場合はハッシュ化する必要はないがjsonのidを使って格納する場合はハッシュ化する必要がある。
+    現段階ではurlのidを使用しているのでハッシュ化は入れていないがjsonのidを使用する際はハッシュ化が必要
+  */
+  const stampdata = (Cookies.get(COOKIE_KEY) ?? id).split(",");
+  if (!stampdata.includes(id)) {
+    stampdata.push(id);
+  }
+
+  Cookies.set(COOKIE_KEY, stampdata.join(","), options);
 };
-type StampData = {
-  id: string;
-  isGet: boolean;
-};
+
 export const GetStampData = (id: string) => {
-  const json = JSON.parse(
-    String(localStorage.getItem("Meigakusai-Stamprally2024"))
-  );
-  const element = json.find((element: StampData) => element.id === id);
-  return element.isGet ?? false;
+  const stampdata = (Cookies.get(COOKIE_KEY) ?? "").split(",");
+  const searchId = HashingSha1(id);
+
+  return stampdata ? stampdata.includes(searchId) : false;
 };
