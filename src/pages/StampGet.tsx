@@ -1,4 +1,4 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Card, Container, Typography } from "@mui/material";
 import bgimg from "../assets/images/bg/home.png";
 import { useNavigate, useParams } from "react-router-dom";
 import jsondata from "../assets/json/stamplist.json";
@@ -10,7 +10,11 @@ export const StampGet = () => {
   const nav = useNavigate();
   const id = useParams();
   const imagesPath = "/src/assets/images/stamp/";
-  const [imagePath, setImagePath] = useState("");
+  const [stampData, setStampData] = useState({
+    shopname: "",
+    classname: "",
+    imagepath: "",
+  });
 
   const StampCheck = () => {
     const shopData = jsondata
@@ -24,19 +28,25 @@ export const StampGet = () => {
       )
       .find((shop) => shop !== undefined);
     useEffect(() => {
-      setImagePath(shopData ? `${imagesPath}${shopData.imagepath}` : "");
+      setStampData({
+        shopname: shopData ? shopData.name : "",
+        classname: shopData ? shopData.classname : "",
+        imagepath: shopData ? `${imagesPath}${shopData.imagepath}` : "",
+      });
     }, [shopData]);
     return shopData ? <SuccessProcess /> : <ErrorProcess />;
   };
 
   const SuccessProcess = () => {
     return (
-      <Box>
-        <Typography variant="h3">スタンプゲット！</Typography>
+      <Card sx={{ borderRadius: "20px", marginY: "20px", padding: "20px" }}>
+        <Typography variant="h4">スタンプゲット！</Typography>
         <Box>
-          <img src={imagePath} alt="stamp" />
+          <img src={stampData.imagepath} alt="stamp" />
+          <Typography variant="h5">{stampData.shopname}</Typography>
+          <Typography variant="h5">{stampData.classname}</Typography>
         </Box>
-      </Box>
+      </Card>
     );
   };
 
