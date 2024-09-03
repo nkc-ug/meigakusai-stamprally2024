@@ -5,6 +5,7 @@ import jsondata from "../assets/json/stamplist.json";
 import { SetStampData } from "../component/StampData";
 import { HashingSha1 } from "../component/HashingSha1";
 import { useEffect, useState } from "react";
+import { useReward } from "react-rewards";
 
 export const StampGet = () => {
   const nav = useNavigate();
@@ -38,15 +39,24 @@ export const StampGet = () => {
   };
 
   const SuccessProcess = () => {
+    const { reward } = useReward("rewardId", "confetti");
+    useEffect(() => {
+      reward();
+    }, [reward]);
     return (
-      <Card sx={{ borderRadius: "20px", marginY: "20px", padding: "20px" }}>
-        <Typography variant="h4">スタンプゲット！</Typography>
-        <Box>
-          <img src={stampData.imagepath} alt="stamp" />
-          <Typography variant="h5">{stampData.shopname}</Typography>
-          <Typography variant="h5">{stampData.classname}</Typography>
-        </Box>
-      </Card>
+      <>
+        <Card
+          sx={{ borderRadius: "20px", marginY: "20px", padding: "20px" }}
+          id="rewardId"
+        >
+          <Typography variant="h4">スタンプゲット！</Typography>
+          <Box>
+            <img src={stampData.imagepath} alt="stamp" />
+            <Typography variant="h5">{stampData.shopname}</Typography>
+            <Typography variant="h5">{stampData.classname}</Typography>
+          </Box>
+        </Card>
+      </>
     );
   };
 
