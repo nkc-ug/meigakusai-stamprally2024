@@ -67,9 +67,7 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
         sx={{
           alignItems: "center",
           justifyContent: "space-around",
-          justify: "flex-start",
         }}
-        xs={12}
       >
         {shoplist}
       </Grid>
