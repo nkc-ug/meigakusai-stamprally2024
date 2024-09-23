@@ -6,7 +6,7 @@ import { ParticipationGuide } from "./pages/ParticipationGuid";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/meigakusai-stamprally2024/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/participation" element={<ParticipationGuide />} />

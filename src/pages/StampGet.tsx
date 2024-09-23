@@ -6,11 +6,11 @@ import { SetStampData } from "../component/StampData";
 import { HashingSha1 } from "../component/HashingSha1";
 import { useEffect, useState } from "react";
 import { useReward } from "react-rewards";
+import { StampImage } from "../component/StampImage";
 
 export const StampGet = () => {
   const nav = useNavigate();
   const id = useParams();
-  const imagesPath = "/src/assets/images/stamp/";
   const [stampData, setStampData] = useState({
     shopname: "",
     classname: "",
@@ -32,7 +32,7 @@ export const StampGet = () => {
       setStampData({
         shopname: shopData ? shopData.name : "",
         classname: shopData ? shopData.classname : "",
-        imagepath: shopData ? `${imagesPath}${shopData.imagepath}` : "",
+        imagepath: shopData ? shopData.imagepath : "",
       });
     }, [shopData]);
     return shopData ? <SuccessProcess /> : <ErrorProcess />;
@@ -51,7 +51,7 @@ export const StampGet = () => {
         >
           <Typography variant="h4">スタンプゲット！</Typography>
           <Box>
-            <img src={stampData.imagepath} alt="stamp" />
+            <img src={StampImage(stampData.imagepath)} alt="stamp" />
             <Typography variant="h5">{stampData.shopname}</Typography>
             <Typography variant="h5">{stampData.classname}</Typography>
           </Box>

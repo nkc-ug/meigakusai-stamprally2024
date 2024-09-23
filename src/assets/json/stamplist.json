@@ -7,56 +7,56 @@
         "name": "模擬店名",
         "classname": "クラス名",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "135",
         "name": "みんなのGameParty",
         "classname": "ゲーム総合学科4年A組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "144",
         "name": "お化けやしき(仮)",
         "classname": "ゲーム総合学科2年B組 \n ゲーム総合学科3年B組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "145",
         "name": "トランプゲーム「ALL In」",
         "classname": "ゲームCG学科2年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "155",
         "name": "ゲームセンター☆ウメダ",
         "classname": "情報総合学科2年B組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "163",
         "name": "GG -GO GAME-",
         "classname": "情報総合学科2年A組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "165",
         "name": "射的訓練場",
         "classname": "情報総合学科1年B組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "174",
         "name": "帝Loveグループ",
         "classname": "情報総合学科1年A組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       }
     ]
   },
@@ -68,49 +68,49 @@
         "name": "仏の岩佐",
         "classname": "電業技術学科2年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "346",
         "name": "モーリーファンタジー",
         "classname": "情報総合学科3年B組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "347",
         "name": "オアシスCS3",
         "classname": "情報システム科3年 \n IT技術研究科1年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "351",
         "name": "リアルサンクチュアリ",
         "classname": "ゲーム総合学科4年B組 \n ゲーム研究科1年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "353",
         "name": "ゲームファンタジー",
         "classname": "情報システム科2年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "354",
         "name": "やわらかしゅーてぃんぐ",
         "classname": "情報総合学科3年A組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "357",
         "name": "C1Amuse",
         "classname": "情報処理学科1年A組",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       }
     ]
   },
@@ -122,28 +122,28 @@
         "name": "ちゃんとした休憩所",
         "classname": "機械制御科2年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "1043",
         "name": "control + break",
         "classname": "電子情報研究科1年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "1046",
         "name": "ボードゲームFlugel",
         "classname": "機械CAD設計科1年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "1051",
         "name": "工学院レトロランド",
         "classname": "電子情報学科1年",
         "category": "文化店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       }
     ]
   },
@@ -155,189 +155,189 @@
         "name": "チュロスとフライドおいものマリアージュ",
         "classname": "情報処理学科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "02",
         "name": "ラーメン鳥居",
         "classname": "情報総合学科4年B組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "03",
         "name": "鉄板中島屋",
         "classname": "情報システム科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "04",
         "name": "団子のよしろう",
         "classname": "事務局",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "05",
         "name": "スーパーボールすくい",
         "classname": "コンピュータ・IT分野",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "06",
         "name": "おからあげ",
         "classname": "機械工学科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "07",
         "name": "ブチ揚げ屋",
         "classname": "電子情報研究科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "08",
         "name": "アゲアゲぱん",
         "classname": "ゲームサイエンス学科2年 \n ゲーム総合学科2年C組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "09",
         "name": "大人のベビーカステラ",
         "classname": "情報システム科3年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "10",
         "name": "チュンチュロ",
         "classname": "IoT技術学科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "11",
         "name": "未定",
         "classname": "ゲーム総合学科4年A組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "12",
         "name": "焼鳥炭ちゃん",
         "classname": "電気工学科1年A組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "13",
         "name": "エターナル焼きそば",
         "classname": "ゲーム総合学科1年B組 \n ゲームCG学科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "14",
         "name": "String meet.\"焼き鳥\"",
         "classname": "情報システム科1年A組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "15",
         "name": "コシーニャ屋",
         "classname": "情報システム科1年B組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "16",
         "name": "薮木おじさんのチュロス",
         "classname": "情報総合学科1年B組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "17",
         "name": "はらぺこ食堂",
         "classname": "情報処理学科1年B組 \n AIイノベーション学科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "18",
         "name": "はな◯製麺",
         "classname": "電気工学研究科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "19",
         "name": "爆裂ポップコーン",
         "classname": "機械制御科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "20",
         "name": "喫茶「青い鳥」",
         "classname": "機械CAD設計科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "21",
         "name": "あげたこ焼き",
         "classname": "ゲーム総合学科3年A組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "22",
         "name": "ヤンのチヂミ",
         "classname": "IoT技術学科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "23",
         "name": "未定",
         "classname": "AIシステム科2年 \n 情報セキュリティ学科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "24",
         "name": "IPPONフランク",
         "classname": "電気工学科2年B組",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "25",
         "name": "やきとりとりとり串タンタン♪",
         "classname": "映像音響科1年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "26",
         "name": "未定",
         "classname": "ゲームCG学科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       },
       {
         "id": "27",
         "name": "串屋　曽我部家",
         "classname": "映像音響科2年",
         "category": "飲食店",
-        "imagepath": "nkc-ug.jpg"
+        "imagepath": "sample"
       }
     ]
   }
