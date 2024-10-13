@@ -4,6 +4,7 @@ import { LocationStamp } from "../types/Stampdatatype";
 import { GetStampData } from "./StampData";
 import unacquired from "/src/assets/images/symbol/unacquired.png";
 import { StampImage } from "./StampImage";
+import { StampCount } from "./StampCount";
 
 type LocationStampProp = {
   json: LocationStamp;
@@ -58,11 +59,16 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
       </Grid>
     );
   });
+  const stampcount = StampCount(json.locationId);
+  const stampcounttext = `${stampcount.count} / ${stampcount.max} (目標数 ${stampcount.required})`;
   return (
     <Box>
-      <Typography variant="h5" sx={{ borderBottom: "2px solid #253958" }}>
-        {json.location}
-      </Typography>
+      <Box>
+        <Typography variant="h5" sx={{ borderBottom: "2px solid #253958" }}>
+          {json.location}
+        </Typography>
+        <Typography>{stampcounttext}</Typography>
+      </Box>
       <Grid
         container
         sx={{
@@ -70,7 +76,6 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
           justifyContent: "space-around",
           justify: "flex-start",
         }}
-        xs={12}
       >
         {shoplist}
       </Grid>

@@ -1,6 +1,8 @@
 [
   {
     "location": "1号館",
+    "locationId": "1",
+    "required": 2,
     "shop": [
       {
         "id": "100",
@@ -62,6 +64,8 @@
   },
   {
     "location": "3号館",
+    "locationId": "3",
+    "required": 2,
     "shop": [
       {
         "id": "336",
@@ -116,6 +120,8 @@
   },
   {
     "location": "10号館",
+    "locationId": "10",
+    "required": 2,
     "shop": [
       {
         "id": "1041",
@@ -148,7 +154,9 @@
     ]
   },
   {
-    "location": "チャレンジングロット",
+    "location": "チャレンジングロット・メモリアルコート",
+    "locationId": "0",
+    "required": 2,
     "shop": [
       {
         "id": "01",
@@ -222,7 +230,7 @@
       },
       {
         "id": "11",
-        "name": "未定",
+        "name": "Tasco",
         "classname": "ゲーム総合学科4年A組",
         "category": "飲食店",
         "imagepath": "sample"
@@ -306,7 +314,7 @@
       },
       {
         "id": "23",
-        "name": "未定",
+        "name": "ソースコード職人",
         "classname": "AIシステム科2年 \n 情報セキュリティ学科2年",
         "category": "飲食店",
         "imagepath": "sample"
@@ -327,7 +335,7 @@
       },
       {
         "id": "26",
-        "name": "未定",
+        "name": "なん茶亭",
         "classname": "ゲームCG学科2年",
         "category": "飲食店",
         "imagepath": "sample"
