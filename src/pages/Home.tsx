@@ -22,7 +22,13 @@ export const Home = () => {
       }}
     >
       <SRHeader />
-      <Grid container direction="row" wrap="wrap" spacing={3} justifyContent="center">
+      <Grid
+        container
+        direction="row"
+        wrap="wrap"
+        spacing={3}
+        justifyContent="center"
+      >
         <Grid item>
           <Button
             variant="contained"
@@ -54,17 +60,22 @@ export const Home = () => {
             variant="contained"
             size="large"
             sx={{ padding: 2, width: "200px" }}
+            onClick={() => {
+              window.open("https://nkc-ug.github.io");
+            }}
           >
             <Typography variant="h5">NKC-UGとは？</Typography>
           </Button>
         </Grid>
       </Grid>
 
-      <hr style={{
-        margin: "50px 0",
-        border: 'none',
-        borderTop: '10px dotted #000',
-      }} />
+      <hr
+        style={{
+          margin: "50px 0",
+          border: "none",
+          borderTop: "10px dotted #000",
+        }}
+      />
 
       <StampList />
     </Container>

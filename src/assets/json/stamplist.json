@@ -163,21 +163,21 @@
         "name": "チュロスとフライドおいものマリアージュ",
         "classname": "情報処理学科2年",
         "category": "飲食店",
-        "imagepath": "sample"
+        "imagepath": "01"
       },
       {
         "id": "02",
         "name": "ラーメン鳥居",
         "classname": "情報総合学科4年B組",
         "category": "飲食店",
-        "imagepath": "sample"
+        "imagepath": "02"
       },
       {
         "id": "03",
         "name": "鉄板中島屋",
         "classname": "情報システム科2年",
         "category": "飲食店",
-        "imagepath": "sample"
+        "imagepath": "03"
       },
       {
         "id": "04",

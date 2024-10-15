@@ -44,7 +44,6 @@ export const StampCount = (text: string) => {
           return json[0].shop;
       }
     };
-    console.log(getLocationJson().filter(isGet).length);
     return getLocationJson().filter(isGet).length;
   };
 
