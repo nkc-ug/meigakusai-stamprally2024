@@ -51,7 +51,12 @@ export const StampGet = () => {
         >
           <Typography variant="h4">スタンプゲット！</Typography>
           <Box>
-            <img src={StampImage(stampData.imagepath)} alt="stamp" />
+            <Box
+              component="img"
+              sx={{ maxWidth: "80%" }}
+              src={StampImage(stampData.imagepath)}
+              alt="stamp"
+            />
             <Typography variant="h5">{stampData.shopname}</Typography>
             <Typography variant="h5">{stampData.classname}</Typography>
           </Box>
@@ -102,6 +107,7 @@ export const StampGet = () => {
 
   return (
     <Container
+      maxWidth="sm"
       sx={{
         height: "100vh",
         padding: 2,

@@ -27,7 +27,8 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
                 alignContent: "center",
               }}
             >
-              <img
+              <Box
+                component="img"
                 src={unacquired}
                 style={{
                   width: "100%",
@@ -37,7 +38,8 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
               />
             </Box>
           )}
-          <img
+          <Box
+            component="img"
             src={StampImage(data.imagepath)}
             style={{
               width: "100%",
@@ -67,7 +69,7 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
         <Typography variant="h5" sx={{ borderBottom: "2px solid #253958" }}>
           {json.location}
         </Typography>
-        <Typography>{stampcounttext}</Typography>
+        <Typography variant="h6">{stampcounttext}</Typography>
       </Box>
       <Grid
         container
