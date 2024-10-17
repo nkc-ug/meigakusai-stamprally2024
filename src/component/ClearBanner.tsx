@@ -3,6 +3,9 @@ import { Button, Typography } from "@mui/material";
 export const ClearBanner = () => {
   return (
     <Button
+      sx={{
+        backgroundColor: "blue",
+      }}
       onClick={() => {
         console.log("交換画面遷移");
       }}
