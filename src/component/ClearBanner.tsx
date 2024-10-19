@@ -13,7 +13,7 @@ export const ClearBanner = () => {
         onClick={handleOpen}
         sx={{ border: "solid 5px", borderRadius: "10px" }}
       >
-        <Typography variant="h4">景品引換用画面</Typography>
+        <Typography variant="h4">景品引換はこちらから！</Typography>
       </Button>
       <Modal open={open} onClose={handleClose}>
         <Exchange handleClose={handleClose} />
