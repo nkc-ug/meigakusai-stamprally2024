@@ -1,7 +1,7 @@
 [
   {
-    "location": "1号館",
-    "locationId": "1",
+    "area": "1号館",
+    "areaId": "1",
     "required": 2,
     "shop": [
       {
@@ -10,6 +10,13 @@
         "classname": "スタンプラリー運営",
         "category": "NKC-UG",
         "imagepath": "sample"
+      },
+      {
+        "id": "120",
+        "name": "担担麵談",
+        "classname": "コンピューター・ＩＴ分野",
+        "category": "NKC-UG",
+        "imagepath": "120"
       },
       {
         "id": "135",
@@ -63,8 +70,8 @@
     ]
   },
   {
-    "location": "3号館",
-    "locationId": "3",
+    "area": "3号館",
+    "areaId": "3",
     "required": 2,
     "shop": [
       {
@@ -119,8 +126,8 @@
     ]
   },
   {
-    "location": "10号館",
-    "locationId": "10",
+    "area": "10号館",
+    "areaId": "10",
     "required": 2,
     "shop": [
       {
@@ -154,8 +161,8 @@
     ]
   },
   {
-    "location": "チャレンジングロット・メモリアルコート",
-    "locationId": "0",
+    "area": "チャレンジングロット・メモリアルコート",
+    "areaId": "0",
     "required": 2,
     "shop": [
       {
@@ -346,12 +353,19 @@
         "classname": "映像音響科2年",
         "category": "飲食店",
         "imagepath": "27"
+      },
+      {
+        "id": "618",
+        "name": "喫茶ナミ",
+        "classname": "教務課",
+        "category": "飲食店",
+        "imagepath": "618"
       }
     ]
   },
   {
-    "location": "催し物",
-    "locationId": "Event",
+    "area": "催し物",
+    "areaId": "Event",
     "required": 2,
     "shop": [
       {

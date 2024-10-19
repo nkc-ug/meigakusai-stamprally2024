@@ -30,7 +30,7 @@ export const StampCount = (text: string) => {
   };
   const getCount = () => {
     const isGet = (value: ShopData) => GetStampData(value.id);
-    const getLocationJson = () => {
+    const getAreaJson = () => {
       switch (text) {
         case "0":
           return json[3].shop;
@@ -44,7 +44,7 @@ export const StampCount = (text: string) => {
           return json[0].shop;
       }
     };
-    return getLocationJson().filter(isGet).length;
+    return getAreaJson().filter(isGet).length;
   };
 
   const stampcount: StampCountType = {

@@ -19,8 +19,8 @@ export const StampGet = () => {
 
   const StampCheck = () => {
     const shopData = jsondata
-      .map((location) =>
-        location.shop.find((data) => {
+      .map((area) =>
+        area.shop.find((data) => {
           if (HashingSha1(String(data.id)) === String(id.id)) {
             SetStampData(String(id.id));
             return true;

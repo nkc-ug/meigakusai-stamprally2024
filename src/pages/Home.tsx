@@ -1,5 +1,4 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
-import bgimg from "../assets/images/bg/home.png";
+import { Button, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { SRHeader } from "../component/SRHeader";
 import { StampList } from "../component/StampList";
@@ -8,19 +7,7 @@ export const Home = () => {
   const nav = useNavigate();
 
   return (
-    <Container
-      maxWidth="sm"
-      sx={{
-        minHeight: "100vh",
-        padding: 2,
-        textAlign: "center",
-        backgroundImage: `url(${bgimg})`,
-        backgroundSize: "auto 100%",
-        backgroundPosition: "center top",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <>
       <SRHeader />
       <Grid
         container
@@ -78,6 +65,6 @@ export const Home = () => {
       />
 
       <StampList />
-    </Container>
+    </>
   );
 };
