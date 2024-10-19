@@ -6,9 +6,9 @@
     "shop": [
       {
         "id": "100",
-        "name": "模擬店名",
-        "classname": "クラス名",
-        "category": "文化店",
+        "name": "サンプル模擬店",
+        "classname": "スタンプラリー運営",
+        "category": "NKC-UG",
         "imagepath": "sample"
       },
       {
@@ -16,49 +16,49 @@
         "name": "みんなのGameParty",
         "classname": "ゲーム総合学科4年A組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "135"
       },
       {
         "id": "144",
         "name": "お化けやしき(仮)",
         "classname": "ゲーム総合学科2年B組 \n ゲーム総合学科3年B組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "144"
       },
       {
         "id": "145",
         "name": "トランプゲーム「ALL In」",
         "classname": "ゲームCG学科2年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "145"
       },
       {
         "id": "155",
         "name": "ゲームセンター☆ウメダ",
         "classname": "情報総合学科2年B組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "155"
       },
       {
         "id": "163",
         "name": "GG -GO GAME-",
         "classname": "情報総合学科2年A組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "163"
       },
       {
         "id": "165",
         "name": "射的訓練場",
         "classname": "情報総合学科1年B組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "165"
       },
       {
         "id": "174",
         "name": "帝Loveグループ",
         "classname": "情報総合学科1年A組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "174"
       }
     ]
   },
@@ -72,49 +72,49 @@
         "name": "仏の岩佐",
         "classname": "電業技術学科2年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "336"
       },
       {
         "id": "346",
         "name": "モーリーファンタジー",
         "classname": "情報総合学科3年B組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "346"
       },
       {
         "id": "347",
         "name": "オアシスCS3",
         "classname": "情報システム科3年 \n IT技術研究科1年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "347"
       },
       {
         "id": "351",
         "name": "リアルサンクチュアリ",
         "classname": "ゲーム総合学科4年B組 \n ゲーム研究科1年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "351"
       },
       {
         "id": "353",
         "name": "ゲームファンタジー",
         "classname": "情報システム科2年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "353"
       },
       {
         "id": "354",
         "name": "やわらかしゅーてぃんぐ",
         "classname": "情報総合学科3年A組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "354"
       },
       {
         "id": "357",
         "name": "C1Amuse",
         "classname": "情報処理学科1年A組",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "357"
       }
     ]
   },
@@ -128,28 +128,28 @@
         "name": "ちゃんとした休憩所",
         "classname": "機械制御科2年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "1041"
       },
       {
         "id": "1043",
         "name": "control + break",
         "classname": "電子情報研究科1年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "1043"
       },
       {
         "id": "1046",
         "name": "ボードゲームFlugel",
         "classname": "機械CAD設計科1年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "1046"
       },
       {
         "id": "1051",
         "name": "工学院レトロランド",
         "classname": "電子情報学科1年",
         "category": "文化店",
-        "imagepath": "sample"
+        "imagepath": "1051"
       }
     ]
   },
@@ -346,6 +346,111 @@
         "classname": "映像音響科2年",
         "category": "飲食店",
         "imagepath": "27"
+      }
+    ]
+  },
+  {
+    "location": "催し物",
+    "locationId": "Event",
+    "required": 2,
+    "shop": [
+      {
+        "id": "E01",
+        "name": "ゲーム・CG分野 学生作品展示",
+        "classname": "ゲームCG分野",
+        "category": "催し物",
+        "imagepath": "E01"
+      },
+      {
+        "id": "E02",
+        "name": "デッサン作品展示会",
+        "classname": "ゲームCG分野",
+        "category": "催し物",
+        "imagepath": "E02"
+      },
+      {
+        "id": "E03",
+        "name": "ストライクアウト",
+        "classname": "電気分野",
+        "category": "催し物",
+        "imagepath": "E03"
+      },
+      {
+        "id": "E04",
+        "name": "キックターゲット",
+        "classname": "電気分野",
+        "category": "催し物",
+        "imagepath": "E04"
+      },
+      {
+        "id": "E05",
+        "name": "セグウェイ試乗体験",
+        "classname": "電気分野",
+        "category": "催し物",
+        "imagepath": "E05"
+      },
+      {
+        "id": "E06",
+        "name": "校友会コーナー",
+        "classname": "校友会",
+        "category": "催し物",
+        "imagepath": "E06"
+      },
+      {
+        "id": "E07",
+        "name": "日本テクノの展示ブース",
+        "classname": "電気分野",
+        "category": "催し物",
+        "imagepath": "E07"
+      },
+      {
+        "id": "E08",
+        "name": "情報通信展",
+        "classname": "情報通信分野",
+        "category": "催し物",
+        "imagepath": "E08"
+      },
+      {
+        "id": "E09",
+        "name": "シアタールーム",
+        "classname": "情報通信分野",
+        "category": "催し物",
+        "imagepath": "E09"
+      },
+      {
+        "id": "E10",
+        "name": "ドローン体験",
+        "classname": "教務課",
+        "category": "催し物",
+        "imagepath": "E10"
+      },
+      {
+        "id": "E11",
+        "name": "キーホルダーをつくろう！",
+        "classname": "機械・ロボット・CAD分野",
+        "category": "催し物",
+        "imagepath": "E11"
+      },
+      {
+        "id": "E12",
+        "name": "マイクロマウス中部地区大会",
+        "classname": "機械・ロボット・CAD分野",
+        "category": "催し物",
+        "imagepath": "E12"
+      },
+      {
+        "id": "E13",
+        "name": "空手デモンストレーション",
+        "classname": "空手部OB",
+        "category": "催し物",
+        "imagepath": "E13"
+      },
+      {
+        "id": "E14",
+        "name": "Shoot De Get！！",
+        "classname": "フットサル部",
+        "category": "催し物",
+        "imagepath": "E14"
       }
     ]
   }
