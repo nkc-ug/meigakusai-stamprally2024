@@ -365,7 +365,7 @@
   },
   {
     "area": "催し物",
-    "areaId": "Event",
+    "areaId": "EV",
     "required": 2,
     "shop": [
       {

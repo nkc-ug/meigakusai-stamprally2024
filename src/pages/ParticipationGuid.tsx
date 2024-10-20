@@ -65,6 +65,9 @@ export const ParticipationGuide = () => {
             <ListItem>
               当サイトはcookieを利用してスタンプを記録しているためcookieの許可をお願いします！
             </ListItem>
+            <ListItem>
+              スタンプのデータは最終取得から７日後に自動的に削除されます
+            </ListItem>
           </List>
         </Typography>
         <Button

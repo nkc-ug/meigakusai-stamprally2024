@@ -24,6 +24,8 @@ export const StampCount = (text: string) => {
         return json[1].shop.length;
       case "10":
         return json[2].shop.length;
+      case "EV":
+        return json[4].shop.length;
       default:
         return 0;
     }
@@ -40,6 +42,8 @@ export const StampCount = (text: string) => {
           return json[1].shop;
         case "10":
           return json[2].shop;
+        case "EV":
+          return json[4].shop;
         default:
           return json[0].shop;
       }
