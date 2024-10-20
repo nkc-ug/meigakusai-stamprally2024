@@ -1,15 +1,10 @@
-import { Button, Container } from "@mui/material";
-import { StampCount } from "../component/StampCount";
+import { Box, Typography } from "@mui/material";
 
 export const Debug = () => {
-  const DebugButton = () => {
-    const text = "1";
-    console.log(StampCount(text)); // JSONデータを参照
-  };
-
   return (
-    <Container disableGutters maxWidth="sm">
-      <Button onClick={DebugButton}>Read to JSON</Button>
-    </Container>
+    <Box>
+      <Typography variant="h4">デバッグ画面</Typography>
+      {/*重要情報をコミットしないように気を付けて*/}
+    </Box>
   );
 };
