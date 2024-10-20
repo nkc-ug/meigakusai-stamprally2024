@@ -6,7 +6,7 @@ import { ClearBanner } from "./ClearBanner";
 
 export const StampList = () => {
   const ClearJudge = () => {
-    const AREA_IDS = ["0", "1", "2", "3", "10"];
+    const AREA_IDS = ["0", "1", "3", "10", "EV"];
     for (const areaId of AREA_IDS) {
       const areaData = StampCount(areaId);
       if (areaData.count < areaData.required) {
@@ -16,7 +16,6 @@ export const StampList = () => {
     return true;
   };
   const isStampRallyClear = ClearJudge();
-  console.log(isStampRallyClear);
   return (
     <Stack justifyContent="center">
       <Box>

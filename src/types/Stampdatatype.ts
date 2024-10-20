@@ -1,6 +1,6 @@
-export type LocationStamp = {
-  location: string;
-  locationId: string;
+export type AreaStamp = {
+  area: string;
+  areaId: string;
   required: number;
   shop: ShopData[];
 };
