@@ -1,15 +1,16 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { LocationStamp } from "../types/Stampdatatype";
+import { AreaStamp } from "../types/Stampdatatype";
 import { GetStampData } from "./StampData";
 import unacquired from "/src/assets/images/symbol/unacquired.png";
 import { StampImage } from "./StampImage";
+import { StampCount } from "./StampCount";
 
-type LocationStampProp = {
-  json: LocationStamp;
+type AreaStampProp = {
+  json: AreaStamp;
 };
 
-export const StampView: React.FC<LocationStampProp> = ({ json }) => {
+export const StampView: React.FC<AreaStampProp> = ({ json }) => {
   const shoplist = json.shop.map((data, index) => {
     const gotStamp = GetStampData(data.id);
     return (
@@ -26,17 +27,19 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
                 alignContent: "center",
               }}
             >
-              <img
+              <Box
+                component="img"
                 src={unacquired}
                 style={{
-                  width: "100%",
-                  height: "auto",
+                  maxWidth: "100%",
+                  maxHeight: "100%",
                 }}
                 alt={"未取得マーク"}
               />
             </Box>
           )}
-          <img
+          <Box
+            component="img"
             src={StampImage(data.imagepath)}
             style={{
               width: "100%",
@@ -58,11 +61,16 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
       </Grid>
     );
   });
+  const stampcount = StampCount(json.areaId);
+  const stampcounttext = `${stampcount.count} / ${stampcount.max} (目標数 ${stampcount.required})`;
   return (
     <Box>
-      <Typography variant="h5" sx={{ borderBottom: "2px solid #253958" }}>
-        {json.location}
-      </Typography>
+      <Box>
+        <Typography variant="h5" sx={{ borderBottom: "2px solid #253958" }}>
+          {json.area}
+        </Typography>
+        <Typography variant="h6">{stampcounttext}</Typography>
+      </Box>
       <Grid
         container
         sx={{
@@ -70,7 +78,6 @@ export const StampView: React.FC<LocationStampProp> = ({ json }) => {
           justifyContent: "space-around",
           justify: "flex-start",
         }}
-        xs={12}
       >
         {shoplist}
       </Grid>
