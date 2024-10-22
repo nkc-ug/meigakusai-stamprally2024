@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { Debug } from "./pages/Debug";
 import { StampGet } from "./pages/StampGet";
 import { ParticipationGuide } from "./pages/ParticipationGuid";
 import { Container } from "@mui/material";
@@ -27,7 +26,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/participation" element={<ParticipationGuide />} />
           <Route path="/stampget/:id" element={<StampGet />} />
-          <Route path="/debug" element={<Debug />} />
         </Routes>
       </BrowserRouter>
     </Container>

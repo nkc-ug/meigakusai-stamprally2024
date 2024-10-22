@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { AreaStamp } from "../types/Stampdatatype";
 import { GetStampData } from "./StampData";
-import unacquired from "/src/assets/images/symbol/unacquired.png";
+//import unacquired from "/src/assets/images/symbol/unacquired.png";
 import { StampImage } from "./StampImage";
 import { StampCount } from "./StampCount";
 
@@ -16,28 +16,6 @@ export const StampView: React.FC<AreaStampProp> = ({ json }) => {
     return (
       <Grid item sx={{ width: "7rem", margin: "4px" }} key={index} xs={4}>
         <Box sx={{ position: "relative" }}>
-          {!gotStamp && (
-            <Box
-              sx={{
-                position: "absolute",
-                zIndex: "1000",
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "center",
-              }}
-            >
-              <Box
-                component="img"
-                src={unacquired}
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                }}
-                alt={"未取得マーク"}
-              />
-            </Box>
-          )}
           <Box
             component="img"
             src={StampImage(data.imagepath)}
@@ -45,6 +23,7 @@ export const StampView: React.FC<AreaStampProp> = ({ json }) => {
               width: "100%",
               height: "auto",
               filter: !gotStamp ? "saturate(0%) brightness(0.5)" : "",
+              marginBottom: "auto",
             }}
             alt={`${data.name}のスタンプ`}
           />
@@ -54,6 +33,7 @@ export const StampView: React.FC<AreaStampProp> = ({ json }) => {
         </Typography>
         <Typography
           variant="body1"
+          gutterBottom={true}
           sx={{ lineHeight: "1.0rem", paddingTop: "2px", fontWeight: "bold" }}
         >
           {data.classname}
