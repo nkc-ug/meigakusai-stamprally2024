@@ -1,9 +1,9 @@
-import { Typography, TypographyVariant } from "@mui/material";
-import React, { ReactNode } from "react";
+import { Box, Typography, TypographyProps } from "@mui/material";
+import React, { ReactNode, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 type ScrollTextProps = {
-  variant: TypographyVariant;
+  variant?: TypographyProps["variant"];
   children: ReactNode;
 };
 
@@ -11,11 +11,18 @@ export const ScrollText: React.FC<ScrollTextProps> = ({
   variant = "body1",
   children,
 }) => {
+  const [onScroll, setScroll] = useState(false);
   return (
-    <Marquee>
-      <Typography variant={variant} sx={{ margin: "0 2em" }}>
-        {children}
-      </Typography>
-    </Marquee>
+    <Box
+      onClick={() => {
+        setScroll(!onScroll);
+      }}
+    >
+      <Marquee speed={35} play={onScroll}>
+        <Typography variant={variant} sx={{ margin: "0 2em" }}>
+          {children}
+        </Typography>
+      </Marquee>
+    </Box>
   );
 };

@@ -2,7 +2,6 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { AreaStamp } from "../types/Stampdatatype";
 import { GetStampData } from "./StampData";
-//import unacquired from "/src/assets/images/symbol/unacquired.png";
 import { StampImage } from "./StampImage";
 import { StampCount } from "./StampCount";
 
@@ -11,10 +10,13 @@ type AreaStampProp = {
 };
 
 export const StampView: React.FC<AreaStampProp> = ({ json }) => {
+  const stampcount = StampCount(json.areaId);
+  const stampcounttext = `${stampcount.count} / ${stampcount.max} (目標数 ${stampcount.required})`;
+
   const shoplist = json.shop.map((data, index) => {
     const gotStamp = GetStampData(data.id);
     return (
-      <Grid item sx={{ width: "7rem", margin: "4px" }} key={index} xs={4}>
+      <Grid item sx={{ margin: "2%" }} key={index} xs={5}>
         <Box sx={{ position: "relative" }}>
           <Box
             component="img"
@@ -28,21 +30,10 @@ export const StampView: React.FC<AreaStampProp> = ({ json }) => {
             alt={`${data.name}のスタンプ`}
           />
         </Box>
-        <Typography variant="body1" sx={{ lineHeight: "1.0rem" }}>
-          {data.name}
-        </Typography>
-        <Typography
-          variant="body1"
-          gutterBottom={true}
-          sx={{ lineHeight: "1.0rem", paddingTop: "2px", fontWeight: "bold" }}
-        >
-          {data.classname}
-        </Typography>
       </Grid>
     );
   });
-  const stampcount = StampCount(json.areaId);
-  const stampcounttext = `${stampcount.count} / ${stampcount.max} (目標数 ${stampcount.required})`;
+
   return (
     <Box>
       <Box>
