@@ -1,14 +1,21 @@
-import { Typography } from "@mui/material";
-import { TypographyProps } from "@mui/material/Typography";
+import { Typography, TypographyVariant } from "@mui/material";
+import React, { ReactNode } from "react";
+import Marquee from "react-fast-marquee";
 
 type ScrollTextProps = {
-  text: string;
-  variantValue?: TypographyProps["variant"];
+  variant: TypographyVariant;
+  children: ReactNode;
 };
 
 export const ScrollText: React.FC<ScrollTextProps> = ({
-  text,
-  variantValue = "body1",
+  variant = "body1",
+  children,
 }) => {
-  return <Typography variant={variantValue}>{text}</Typography>;
+  return (
+    <Marquee>
+      <Typography variant={variant} sx={{ margin: "0 2em" }}>
+        {children}
+      </Typography>
+    </Marquee>
+  );
 };

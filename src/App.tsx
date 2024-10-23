@@ -5,6 +5,7 @@ import { ParticipationGuide } from "./pages/ParticipationGuid";
 import { Container } from "@mui/material";
 
 import bgimg from "/src/assets/images/bg/home.png";
+import { Debug } from "./debug/Debug";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/participation" element={<ParticipationGuide />} />
           <Route path="/stampget/:id" element={<StampGet />} />
+          <Route path="/debug" element={<Debug />} />
         </Routes>
       </BrowserRouter>
     </Container>
