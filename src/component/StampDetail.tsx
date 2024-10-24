@@ -1,30 +1,35 @@
-import { Card, Modal } from "@mui/material";
-import { useState } from "react";
+import { Box, Typography } from "@mui/material";
+import { ShopData } from "../types/Stampdatatype";
+import React, { ReactNode } from "react";
+import { StampImage } from "./StampImage";
 
-export const StampDetail = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+type StampDetailProps = {
+  stampdata: ShopData;
+  isGet: boolean;
+  children: ReactNode;
+};
 
+export const StampDetail: React.FC<StampDetailProps> = ({
+  stampdata,
+  isGet,
+  children,
+}) => {
   return (
-    <>
-      <Modal open={open} onClose={handleClose}>
-        <Card
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            maxWidth: 552,
-            width: "80%",
-            bgcolor: "background.paper",
-            border: "2px solid #000",
-            boxShadow: 24,
-            p: 4,
-            textAlign: "center",
-          }}
-        ></Card>
-      </Modal>
-    </>
+    <Box>
+      <Typography variant="h5">{stampdata.name}</Typography>
+      <Box
+        component="img"
+        src={StampImage(stampdata.imagepath)}
+        alt={`${stampdata.name}のスタンプ`}
+        sx={{
+          width: "100%",
+          height: "auto",
+          filter: !isGet ? "saturate(0%) brightness(0.5)" : "",
+          padding: "5%",
+        }}
+      />
+      <Typography variant="h5">{stampdata.classname}</Typography>
+      {children}
+    </Box>
   );
 };

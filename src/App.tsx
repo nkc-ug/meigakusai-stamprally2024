@@ -4,6 +4,7 @@ import { StampGet } from "./pages/StampGet";
 import { ParticipationGuide } from "./pages/ParticipationGuid";
 import { Container } from "@mui/material";
 import bgimg from "/src/assets/images/bg/home.png";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         padding: 2,
         textAlign: "center",
         backgroundImage: `url(${bgimg})`,
-        backgroundSize: "auto 100%",
+        backgroundSize: "auto 100vh",
         backgroundPosition: "center top",
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/participation" element={<ParticipationGuide />} />
           <Route path="/stampget/:id" element={<StampGet />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Container>

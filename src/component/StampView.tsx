@@ -2,8 +2,8 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { AreaStamp } from "../types/Stampdatatype";
 import { GetStampData } from "./StampData";
-import { StampImage } from "./StampImage";
 import { StampCount } from "./StampCount";
+import { StampButton } from "./StampButton";
 
 type AreaStampProp = {
   json: AreaStamp;
@@ -18,17 +18,7 @@ export const StampView: React.FC<AreaStampProp> = ({ json }) => {
     return (
       <Grid item sx={{ margin: "2%" }} key={index} xs={5}>
         <Box sx={{ position: "relative" }}>
-          <Box
-            component="img"
-            src={StampImage(data.imagepath)}
-            style={{
-              width: "100%",
-              height: "auto",
-              filter: !gotStamp ? "saturate(0%) brightness(0.5)" : "",
-              marginBottom: "auto",
-            }}
-            alt={`${data.name}のスタンプ`}
-          />
+          <StampButton stampdata={data} isGet={gotStamp} />
         </Box>
       </Grid>
     );

@@ -132,7 +132,7 @@ export const StampGet = () => {
             nav("/");
           }}
         >
-          スタンプ一覧へ
+          ホームへ
         </Button>
       </Box>
     </Container>

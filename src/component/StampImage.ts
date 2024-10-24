@@ -126,6 +126,5 @@ export const StampImage = (stamp: string) => {
     E13: stampE13,
     E14: stampE14,
   };
-
   return STAMPIMAGE_LIST[stamp] ?? sample;
 };
