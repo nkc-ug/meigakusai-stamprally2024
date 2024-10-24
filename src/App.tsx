@@ -15,7 +15,7 @@ function App() {
         padding: 2,
         textAlign: "center",
         backgroundImage: `url(${bgimg})`,
-        backgroundSize: "auto 100vh",
+        backgroundSize: "auto 100%",
         backgroundPosition: "center top",
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
