@@ -5,15 +5,8 @@
     "required": 2,
     "shop": [
       {
-        "id": "100",
-        "name": "サンプル模擬店",
-        "classname": "スタンプラリー運営",
-        "category": "NKC-UG",
-        "imagepath": "sample"
-      },
-      {
         "id": "120",
-        "name": "担担麵談",
+        "name": "担担麺談",
         "classname": "コンピューター・ＩＴ分野",
         "category": "NKC-UG",
         "imagepath": "120"
@@ -27,7 +20,7 @@
       },
       {
         "id": "144",
-        "name": "お化けやしき(仮)",
+        "name": "お化けやしき",
         "classname": "ゲーム総合学科2年B組 \n ゲーム総合学科3年B組",
         "category": "文化店",
         "imagepath": "144"
@@ -196,7 +189,7 @@
       {
         "id": "05",
         "name": "スーパーボールすくい",
-        "classname": "コンピュータ・IT分野",
+        "classname": "コンピューター・IT分野",
         "category": "飲食店",
         "imagepath": "05"
       },
