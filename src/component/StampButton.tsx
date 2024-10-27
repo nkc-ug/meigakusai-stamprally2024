@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { ShopData } from "../types/Stampdatatype";
 import { StampImage } from "./StampImage";
 import { StampDetail } from "./StampDetail";
+import getSymbol from "/src/assets/images/symbol/get.png";
 
 type StampButtonProps = {
   stampdata: ShopData;
@@ -30,7 +31,22 @@ export const StampButton: React.FC<StampButtonProps> = ({
           marginBottom: "auto",
         }}
         alt={`${stampdata.name}のスタンプ`}
-      ></Box>
+      />
+      {isGet ? (
+        <Box
+          component="img"
+          src={getSymbol}
+          sx={{
+            width: "75%",
+            position: "absolute",
+            top: "0.15em",
+            right: "-0.50em",
+            transform: "rotate(15deg)",
+          }}
+        />
+      ) : (
+        ""
+      )}
       <Modal open={open} onClose={handleClose}>
         <Card
           sx={{

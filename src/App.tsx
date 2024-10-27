@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { StampGet } from "./pages/StampGet";
 import { ParticipationGuide } from "./pages/ParticipationGuid";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import bgimg from "/src/assets/images/bg/home.png";
 import { NotFound } from "./pages/NotFound";
 
@@ -14,13 +14,22 @@ function App() {
         minHeight: "100vh",
         padding: 2,
         textAlign: "center",
-        backgroundImage: `url(${bgimg})`,
-        backgroundSize: "auto 100%",
-        backgroundPosition: "center top",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
+        clipPath: "inset(0)",
       }}
     >
+      <Box
+        component="img"
+        src={bgimg}
+        sx={{
+          width: "auto",
+          height: "100%",
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)", // 中央に配置
+          zIndex: "-1",
+        }}
+      />
       <BrowserRouter basename="/meigakusai-stamprally2024/">
         <Routes>
           <Route path="/" element={<Home />} />
