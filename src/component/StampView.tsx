@@ -27,7 +27,11 @@ export const StampView: React.FC<AreaStampProp> = ({ json }) => {
   return (
     <Box>
       <Box>
-        <Typography variant="h5" sx={{ borderBottom: "2px solid #253958" }}>
+        <Typography
+          variant="h5"
+          sx={{ borderBottom: "2px solid #253958" }}
+          id={json.areaId}
+        >
           {json.area}
         </Typography>
         <Typography variant="h6">{stampcounttext}</Typography>

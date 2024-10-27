@@ -2,6 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { SRHeader } from "../component/SRHeader";
 import { StampList } from "../component/StampList";
+import { AreaBar } from "../component/AreaBar";
 
 export const Home = () => {
   const nav = useNavigate();
@@ -65,6 +66,7 @@ export const Home = () => {
       />
 
       <StampList />
+      <AreaBar />
     </>
   );
 };
