@@ -17,6 +17,23 @@ export const StampGet = () => {
     imagepath: "",
   });
 
+  const BrowserAnnounce = () => {
+    return (
+      <Box margin="0.5rem">
+        <Typography variant="h4" color="red">
+          QRコードリーダーから
+          <br />
+          QRコードを読み込んでいる方へ
+        </Typography>
+        <Typography textAlign="left">
+          iPhoneのQRコードリーダーを使用して名学祭スタンプラリーサイトへアクセスするとCookieが正常に記録できません！
+          <br />
+          カメラアプリからQRコードを読み直すか画面右下の🧭（コンパス）のマークを押してsafariなどのブラウザアプリに切り替えてください！
+        </Typography>
+      </Box>
+    );
+  };
+
   const StampCheck = () => {
     const shopData = jsondata
       .map((area) =>
@@ -61,6 +78,7 @@ export const StampGet = () => {
             <Typography variant="h5">{stampData.classname}</Typography>
           </Box>
         </Card>
+        <BrowserAnnounce />
       </>
     );
   };

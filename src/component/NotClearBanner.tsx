@@ -1,16 +1,15 @@
 import { Button, Card, Modal, Typography } from "@mui/material";
 import { forwardRef, useRef, useState } from "react";
-import { Exchange } from "./Exchange";
+import { Terms } from "./Terms";
 
 // forwardRef の型を正しく設定
-const ExchangeWithRef = forwardRef<
-  HTMLInputElement,
-  { handleClose: () => void }
->((props, ref) => {
-  return <Exchange {...props} ref={ref} />;
-});
+const TermsWithRef = forwardRef<HTMLInputElement, { handleClose: () => void }>(
+  (props, ref) => {
+    return <Terms {...props} ref={ref} />;
+  }
+);
 
-export const ClearBanner = () => {
+export const NotClearBanner = () => {
   const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null); // ref の型を指定
 
@@ -22,9 +21,17 @@ export const ClearBanner = () => {
       <Button
         variant="contained"
         onClick={handleOpen}
-        sx={{ borderRadius: "20px", padding: "0.75rem", width: "90%" }}
+        sx={{
+          borderRadius: "20px",
+          padding: "0.75rem",
+          width: "90%",
+          backgroundColor: "#666",
+          "&:hover": {
+            backgroundColor: "#666",
+          },
+        }}
       >
-        <Typography variant="h5">景品引換はこちらから！</Typography>
+        <Typography variant="h5">条件未達成</Typography>
       </Button>
       <Modal open={open} onClose={handleClose}>
         <Card
@@ -42,7 +49,7 @@ export const ClearBanner = () => {
             textAlign: "center",
           }}
         >
-          <ExchangeWithRef ref={inputRef} handleClose={handleClose} />
+          <TermsWithRef ref={inputRef} handleClose={handleClose} />
         </Card>
       </Modal>
     </>
