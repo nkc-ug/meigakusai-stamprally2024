@@ -1,5 +1,4 @@
 import { Box, Button, Card, Container, Typography } from "@mui/material";
-import bgimg from "../assets/images/bg/home.png";
 import { useNavigate, useParams } from "react-router-dom";
 import jsondata from "../assets/json/stamplist.json";
 import { SetStampData } from "../component/StampData";
@@ -19,8 +18,8 @@ export const StampGet = () => {
 
   const BrowserAnnounce = () => {
     return (
-      <Box margin="0.5rem">
-        <Typography variant="h4" color="red">
+      <Card sx={{ margin: "0.5rem", padding: "1rem", borderRadius: "20px" }}>
+        <Typography variant="h5" color="red">
           QRコードリーダーから
           <br />
           QRコードを読み込んでいる方へ
@@ -30,7 +29,7 @@ export const StampGet = () => {
           <br />
           カメラアプリからQRコードを読み直すか画面右下の🧭（コンパス）のマークを押してsafariなどのブラウザアプリに切り替えてください！
         </Typography>
-      </Box>
+      </Card>
     );
   };
 
@@ -70,7 +69,7 @@ export const StampGet = () => {
           <Box>
             <Box
               component="img"
-              sx={{ maxWidth: "80%" }}
+              sx={{ maxWidth: "80%", margin: "0.5rem" }}
               src={StampImage(stampData.imagepath)}
               alt="stamp"
             />
@@ -127,14 +126,9 @@ export const StampGet = () => {
     <Container
       maxWidth="sm"
       sx={{
-        height: "100vh",
+        minHeight: "100vh",
         padding: 2,
         textAlign: "center",
-        backgroundImage: `url(${bgimg})`,
-        backgroundSize: "auto 100vh",
-        backgroundPosition: "center top",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

@@ -7,17 +7,14 @@ import { NotClearBanner } from "./NotClearBanner";
 
 export const StampList = () => {
   const ClearJudge = () => {
-    const TOTALCOUNT_REQUIRED = 10;
-    const AREACOUNT_REQUIRED = 3;
+    const TOTALCOUNT_REQUIRED = 5;
     let totalcount = 0;
-    let areacount = 0;
     const AREA_IDS = ["0", "1", "3", "10", "EV"];
     for (const areaId of AREA_IDS) {
       const areaData = StampCount(areaId);
       totalcount += areaData.count;
-      if (areaData.count > 0) areacount++;
     }
-    if (totalcount >= TOTALCOUNT_REQUIRED && areacount >= AREACOUNT_REQUIRED) {
+    if (totalcount >= TOTALCOUNT_REQUIRED) {
       return true;
     }
     return false;

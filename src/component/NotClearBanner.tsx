@@ -33,6 +33,7 @@ export const NotClearBanner = () => {
       >
         <Typography variant="h5">条件未達成</Typography>
       </Button>
+      <Typography>こちらをタップすると条件を確認できます！</Typography>
       <Modal open={open} onClose={handleClose}>
         <Card
           sx={{
