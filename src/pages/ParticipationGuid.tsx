@@ -27,6 +27,9 @@ export const ParticipationGuide = () => {
           <ListItem>
             4, 目標数集めたら６号館１階の景品引換所で景品をゲット！
           </ListItem>
+          <Typography sx={{ textAlign: "left", padding: "0 1rem" }}>
+            ※目標数はホーム画面の「条件未達成」をタップすると確認できます
+          </Typography>
         </List>
       </Typography>
       <Typography variant="h5" sx={{ color: "red" }}>

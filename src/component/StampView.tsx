@@ -11,7 +11,7 @@ type AreaStampProp = {
 
 export const StampView: React.FC<AreaStampProp> = ({ json }) => {
   const stampcount = StampCount(json.areaId);
-  const stampcounttext = `${stampcount.count} / ${stampcount.max} (目標数 ${stampcount.required})`;
+  const stampcounttext = `${stampcount.count} / ${stampcount.max}`;
 
   const shoplist = json.shop.map((data, index) => {
     const gotStamp = GetStampData(data.id);
